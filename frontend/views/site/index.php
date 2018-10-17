@@ -10,7 +10,7 @@ $this->title = 'Siberian Power Ltd.';
 </div>
 
 <div class="idea">
-    <h2>Providing the structure & interactive functionality <br/>for hi-tech related business & minimizing any of <br/>your operational activity.</h2>
+    <h2>Providing the structure & interactive functionality <br/>for hi-tech related business while minimizing <br/>any of your operational activity.</h2>
 </div>
 
 
