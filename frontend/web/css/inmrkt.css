@@ -1,0 +1,96 @@
+body {
+    font-family: 'titillium web', sans-serif;
+    min-height: 100%;
+    font-size: 27px;
+    color: #333;
+    margin: 0;
+}
+
+
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    color: #333;
+}
+h1, h2 {
+    margin: 0;
+}
+
+
+
+.wrap {
+    float: left;
+    height: 100%;
+    padding-left: 30%;
+    width: 40%;
+}
+
+
+
+.title {
+    width: 100%;
+    text-align: left;
+    margin: 20% 0 0;
+}
+.title h1 {
+    /* font-family: 'sacramento', sans-serif; */
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100px;
+}
+
+
+
+.idea {
+    width: 100%;
+    text-align: left;
+}
+.idea h2 {
+    word-spacing: 5px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+
+.mail {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-top: 20%;
+}
+.mail a {
+    background-color: #fedd60;
+    padding: 5px 20px 6px;
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #333;
+}
+
+@media only screen
+and (min-width : 0)
+and (max-width : 1280px)
+and (orientation : landscape), only screen
+and (min-width : 0)
+and (max-width : 1280px)
+and (orientation : portrait) {
+
+    .wrap {
+        padding-left: 15%;
+        width: 70%;
+    }
+    .title {
+        margin-top: 5%;
+    }
+    .title h1 {
+        line-height: 100px;
+    }
+    .mail {
+        margin-top: 30%;
+    }
+    .idea br {
+        display: none;
+    }
+
+}
