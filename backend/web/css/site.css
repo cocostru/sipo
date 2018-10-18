@@ -137,25 +137,4 @@ and (orientation : portrait) {
     .form-mail {
         width: 100%;
     }
-
-    .wrap {
-        padding-left: 15%;
-        width: 90%;
-    }
-    .title {
-        margin-top: 5%;
-    }
-    .title h1 {
-        float: left;
-        font-size: 30px;
-        line-height: 100px;
-        white-space: nowrap;
-    }
-    .mail {
-        margin-top: 30%;
-    }
-    .idea br {
-        display: none;
-    }
-
 }
