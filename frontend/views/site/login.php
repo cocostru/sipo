@@ -7,33 +7,46 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
+$this->title = 'siberianpower.io';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<style type="text/css">
+.site-login {
+    width: 400px;
+    margin-top: 20%;
+}
+.help-block {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    font-size: 14px;
+}
+.form-group {
+    position: relative;
+}
+strong {
+    font-size: 16px;
+}
+</style>
+
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <strong class="text-primary"><?= Html::encode($this->title) ?></strong><br/><br/><br/>
 
-    <p>Please fill out the following fields to login:</p>
-
-    <div class="row">
-        <div class="col-lg-5">
+        <div>
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?php //echo $form->field($model, 'username')->textInput(['autofocus' => true]); ?>
+                <?php echo $form->field($model, 'username')->textInput(['class' => 'form-control', 'autofocus' => true, 'placeholder' => 'Email Address'])->label(false); ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?php echo $form->field($model, 'password')->passwordInput(['class' => 'form-control', 'placeholder' => 'Password'])->label(false); ?><br/>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-
-                <div style="color:#999;margin:1em 0">
-                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                </div>
+                <?php //echo $form->field($model, 'rememberMe')->checkbox(); ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
+                    <?php echo Html::submitButton('Sign In', ['class' => 'btn', 'name' => 'login-button']); ?>
+                </div><br/>
 
             <?php ActiveForm::end(); ?>
         </div>
-    </div>
 </div>

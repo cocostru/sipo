@@ -5,6 +5,10 @@
 $this->title = 'Siberian Power Ltd.';
 ?>
 
+<div>
+    <a href="/backend/web/index.php?r=site/login" class="link-sign">Sign In</a>
+</div>
+
 <div class="title">
     <h1>SiberianPower Ltd.</h1><br/>
 </div>
@@ -15,5 +19,5 @@ $this->title = 'Siberian Power Ltd.';
 
 
 <div class="mail">
-    <h2> <a href="mailto:info@siberianpower.io?subject=Informational support. SiberianPower" target="_blank"> info@siberianpower . io </a> </h2>
+    <h2> <a href="mailto:info@siberianpower.io?subject=Informational support. SiberianPower" target="_blank"> <span class="span-btn-email">info@</span>siberianpower.io </a> </h2>
 </div>

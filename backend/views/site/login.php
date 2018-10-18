@@ -8,26 +8,44 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<style type="text/css">
+.help-block {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    font-size: 14px;
+}
+.form-group {
+    position: relative;
+}
+strong {
+    font-size: 16px;
+}
+</style>
+
+<div class="site-login">
+
+    <br/>
+    <br/>
+    <br/>
+    <p class="text-muted">Please fill out the following fields to login:</p>
+    <br/>
 
     <div class="row">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?php echo $form->field($model, 'username')->textInput(['class' => 'form-control', 'autofocus' => true, 'placeholder' => 'Username'])->label(false); ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?php echo $form->field($model, 'password')->passwordInput(['class' => 'form-control', 'placeholder' => 'Password'])->label(false); ?>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                <br/>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
+                    <?php echo Html::submitButton('Sign In', ['class' => 'btn', 'name' => 'login-button']); ?>
+                </div><br/>
 
             <?php ActiveForm::end(); ?>
         </div>

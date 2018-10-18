@@ -24,8 +24,6 @@ AppAsset::register($this);
     <?php $this->head() ?>
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <?php $this->beginBody() ?>

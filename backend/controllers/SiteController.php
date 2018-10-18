@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use backend\models\MailForm;
 
 /**
  * Site controller
@@ -26,7 +27,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'mail'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -61,6 +62,26 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionMail()
+    {
+        $model = new MailForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail($model->email)) {
+                Yii::$app->session->setFlash('success', 'Message has been sent!');
+            } else {
+                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+            }
+
+            return $this->refresh();
+
+        } else {
+            return $this->render('mail', [
+                'model' => $model,
+            ]);
+        }
+
     }
 
     /**
