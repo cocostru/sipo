@@ -31,7 +31,7 @@ label {
 <div class="site-contact">
 
 
-    <div style="width: 40%">
+    <div class="form-mail">
 
     	<h3>Mailing</h3><br/>
         <br/><br/>
