@@ -10,7 +10,10 @@ $this->title = 'Siberian Power Ltd.';
 </div>
 
 <div class="title">
-    <h1>SiberianPower Ltd.</h1><br/>
+    <h1>
+    	<img class="img-logo" src="img/logo-sp.png"/>
+	    SiberianPower Ltd.
+	</h1><br/>
 </div>
 
 <div class="idea">
